@@ -29,6 +29,11 @@
                 <p class="mt-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam iusto illum corrupti facere eum placeat cupiditate totam cum? Rerum non dolore repudiandae impedit placeat quod totam obcaecati distinctio, consectetur nobis.
                 </p>
+                <h4 class="mt-2">Subscribe to Our Newsletter</h4>
+                <form action="" class="form-controll">
+                    <input type="text" name="emailid" id="" placeholder="Enter You Email Id" class="newsletter">
+                    <input type="submit" value="Subscribe" name="subscribe" class="btn btn-md bg-custom text-white mt-2">
+                </form>
             </div>
         </div>
     </div>
