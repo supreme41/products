@@ -9,7 +9,7 @@
         <a href="product-details.php" class="prod-card"><div class="col-lg-3 mt-4">
             <div class="card px-2 py-3">
                 <img src="images/featured-1.png" alt="" class="w-100">
-                <h5 class="mt-2">
+                <h5 class="mt-2 ">
                     Supreme Solar Water Heater 200LPD Glass lined Model
                 </h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum officia totam.</p>
@@ -28,7 +28,7 @@
             <div class="card px-2 py-3">
                 <img src="images/featured-1.png" alt="" class="w-100">
                 <h5 class="mt-2">
-                    Supreme Solar Water Heater 200LPD Glass lined Model
+                    Supreme Solar Water Heater 200LPD Glass lined Model 
                 </h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum officia totam.</p>
             </div>
