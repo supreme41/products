@@ -266,6 +266,53 @@ td {
   border: 0.5px solid black;
   font-size: 12px;
 }
+.bg-dark-grey {
+  background: linear-gradient(rgb(70, 70, 70), black);
+}
+.login-form {
+  input {
+    width: 80%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    border: 0.5px solid grey;
+  }
+  .btn {
+    width: 30%;
+    background: linear-gradient(rgb(70, 70, 70), black);
+    color: white;
+  }
+}
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    .btn {
+      border: 2px solid white;
+      width: 150px;
+      color: white;
+      margin-top: 15px;
+      transition: 0.5s ease;
+    }
+    .btn:hover {
+      color: black;
+      background-color: white;
+      box-shadow: 10px 10px 15px rgb(0, 0, 0, 0.6);
+    }
+  }
+}
+.signup-form {
+  input {
+    width: 80%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    border: 0.5px solid grey;
+  }
+}
 
 @media only screen and (max-width: 800px) {
   .top-bar-right {

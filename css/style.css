@@ -200,6 +200,53 @@ td {
   font-size: 12px;
 }
 
+.bg-dark-grey {
+  background: -webkit-gradient(linear, left top, left bottom, from(#464646), to(black));
+  background: linear-gradient(#464646, black);
+}
+
+.login-form input {
+  width: 80%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  border: 0.5px solid grey;
+}
+
+.login-form .btn {
+  width: 30%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#464646), to(black));
+  background: linear-gradient(#464646, black);
+  color: white;
+}
+
+.signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup div .btn {
+  border: 2px solid white;
+  width: 150px;
+  color: white;
+  margin-top: 15px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.signup div .btn:hover {
+  color: black;
+  background-color: white;
+}
+
 @media only screen and (max-width: 800px) {
   .top-bar-right {
     margin-top: 15px;

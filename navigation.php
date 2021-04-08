@@ -141,7 +141,7 @@
         </li>
       </ul>
       <form class="d-flex">
-        <a href="#" class="btn btn-md bg-custom text-white"> <span class="fa fa-sign-in"></span> &nbsp; Login</a>
+        <a href="login.php" class="btn btn-md bg-custom text-white"> <span class="fa fa-sign-in"></span> &nbsp; Login</a>
       </form>
     </div>
   </div>
