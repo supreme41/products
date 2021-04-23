@@ -1,0 +1,204 @@
+
+/* # General
+================================ */
+
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+/* # Header, Main Menu
+================================ */
+
+.navbar {
+ 
+  margin-bottom: 0;
+
+  transition: all 0.2s ease-out;
+}
+
+.navbar-container {
+	position: relative;
+}
+
+.navbar .navbar-nav li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff !important;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  transition: all 0.2s ease-out;
+	color: rgba(200,100,0,0.8);
+}
+
+.navbar-scroll {
+  opacity: 1;
+}
+
+#top-social-menu {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 120px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 35px;
+    margin-left: 50px;
+    line-height: 70px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+    padding: 0;
+    height: 120px;
+    line-height: 120px;
+  }
+
+  #top-social-menu {
+    display: initial;
+  }
+
+  /* Navbar when scrolled */
+
+  .navbar-scroll {
+    height: 100px;
+  }
+
+  .navbar-scroll #top-social-menu {
+    display: none;
+    transition: all 0.2s ease-out;
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+/* # Hover Link Effect
+================================ */
+@media (min-width: 768px) {
+  .navbar-nav>li>a::after {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #2E1C05;
+    content: '';
+    opacity: 0;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    transform: translateY(-10px);
+  }
+
+  .navbar-nav>li>a:hover::after,
+  .navbar-nav>li>a:focus::after {
+    height: 2px;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* # Social menu
+================================ */
+
+#top-social-menu {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  font-size: 12px;
+  z-index: 101;
+  padding-right: 0px;
+  list-style: none;
+  color: #2E1C05;
+  transition: all 0.2s ease-out;
+
+}
+
+#top-social-menu li {
+  float: left;
+  padding: 10px 15px;
+  font-size:16px;
+  color:#fff !important;
+}
+
+#top-social-menu li:last-child {
+  padding-right: 0;
+}
+
+#top-social-menu li a {
+  text-decoration: none;
+  color: #2E1C05;
+}
+
+#top-social-menu li a:hover {
+  text-decoration: none;
+  color: #543A1A;
+}
+
+#top-social-menu i {
+ 	font-size: 16px;
+  
+  transition: all 0.2s ease-in;
+}
+
+#top-social-menu i:hover {
+  text-decoration: none;
+  color: #543A1A;
+}
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 10%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 90%;
+  border-left: none;
+  height: 100%;
+}
