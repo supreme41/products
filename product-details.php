@@ -1,27 +1,81 @@
 <?php
-    $title="product Details";
+
+            include('connection/connection.php');
+
+            if(isset($_REQUEST['id'])){
+                $id = $_REQUEST['id'];
+
+                $sql = "SELECT * FROM products WHERE pid = $id";
+            $res = mysqli_query($conn,  $sql);
+
+            if (mysqli_num_rows($res) > 0) {
+                while ($prod = mysqli_fetch_assoc($res)) {  ?>
+
+<?php
+    $title=$prod['pname'];
     include('top.php');
     include('navigation.php');
 ?>
 
 <div class="container mt-5 shadow">
+    
+
     <div class="row">
+
         <div class="col-lg-5 prod-cat-section">
-            <img src="images/featured-1.png" alt="" class="w-100">
-        </div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background: none;">
+                        <img src="admin/upload_product_images/<?php echo $prod['image1']; ?>" class="d-block w-100" alt="<?php  echo $prod['pname']; ?>">
+                    </div>
+                    <div class="carousel-item" style="background: none;">
+                        <img src="admin/upload_product_images/<?php echo $prod['image2']; ?>" class="d-block w-100" alt="<?php  echo $prod['pname']; ?>">
+                    </div>
+                    <div class="carousel-item" style="background: none;">
+                        <img src="admin/upload_product_images/<?php echo $prod['image3']; ?>" class="d-block w-100" alt="<?php  echo $prod['pname']; ?>">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+	    </div>
+
         <div class="col-lg-7 prod-details">
             <h2 class="skinny-text">
-                Supreme Solar Water Heater 200LPD Glass lined Model 
+                <?php echo $prod['pname']  ?>
             </h2>
             <p class="mt-4 text-grey">
-                Product Description : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum minus, quis voluptatem 
-                obcaecati est ea nesciunt qui sit temporibus!
+                Product Description : <?php echo $prod['pdescription']; ?>
             </p>
+            <h3 class="pt-3 skinny-text"> Product Features </h3>
+            <ul class="mt-4">
+                <li class="mt-2">
+                    <?php echo $prod['pfeatures1'] ?>
+                </li>
+                <li class="mt-2">
+                    <?php echo $prod['pfeatures2'] ?>
+                </li>
+                <li class="mt-2">
+                    <?php echo $prod['pfeatures3'] ?>
+                </li>
+                <li class="mt-2">
+                    <?php echo $prod['pfeatures4'] ?>
+                </li>
+                <li class="mt-2">
+                    <?php echo $prod['pfeatures5'] ?>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
 
-<div class="container mt-5">
+<!-- <div class="container mt-5">
     <div class="col-lg-6">
         <table class="table table-responsive">
             <thead>
@@ -139,9 +193,9 @@
             </tbody>
         </table>
     </div>
-</div>
+</div> -->
 
-
+<?php } } } ?>
 
 <div class="p-3"></div>
 <?php
