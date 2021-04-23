@@ -22,7 +22,7 @@
 </div>
 
 <div class="container mt-5">
-    <div class="col-lg-8">
+    <div class="col-lg-6">
         <table class="table table-responsive">
             <thead>
                 <tr>
@@ -140,6 +140,8 @@
         </table>
     </div>
 </div>
+
+
 
 <div class="p-3"></div>
 <?php

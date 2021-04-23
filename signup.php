@@ -1,29 +1,4 @@
-<?php
-SESSION_START();
-include('connection/connection.php');
-if(isset($_POST['signup'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $pwd = $_POST['password'];
-    $c_pwd = $_POST['password_2'];
-
-    if($pwd != $c_pwd){
-        $_SESSION['error'] = "Passwords does not match";
-        header('Location: signup.php');
-    }
-    else{
-        $pwd = password_hash($pwd,PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users (u_name, u_email, u_phone, u_pwd) VALUES ('$name', '$email', '$phone', '$pwd')";
-        $result = mysqli_query($conn, $sql);
-
-        header("location: index.php");
-    }
-
-}
-?>
-
-<?php
+<?php 
     $title="Signup - Supreme Products";
     include('top.php');
     include('navigation.php');
@@ -33,30 +8,42 @@ if(isset($_POST['signup'])){
     <div class="container">
         <div class="col-lg-6 m-auto bg-white py-5 shadow text-center">
             <h3>Signup To Supreme Products</h3>
-            <div class="text-danger">
-                        <?php
-                        if(isset($_SESSION["error"])){
-                            echo "
-                              <div class='alert alert-danger alert-dismissible'>
-                                <h4><i class='icon fa fa-warning'></i> Error!</h4>
-                                ".$_SESSION["error"]."
-                              </div>
-                            ";
-                            unset($_SESSION["error"]);
-                          }       
-                        ?>
-                  </div>
-            <form action="signup.php" method="POST" class="login-form mt-3">
-                <input type="text" name="name" placeholder="Name" class="mt-3" required> <br>
-                <input type="email" name="email" placeholder="Email" class="mt-3" required> <br>
-                <input type="text" name="phone" placeholder="Phone Number" class="mt-3" required> <br>
-                <input type="password" name="password" placeholder="Create Password" class="mt-3" required> <br>
-                <input type="password" name="password_2" placeholder="Confirm Password" class="mt-3" required> <br>
+            <p class="alert-danger" id="result"></p>
+            <form method="POST" class="login-form mt-3">
+                <input type="text" name="name" placeholder="Name" class="mt-3" id="name" required> <br>
+                <input type="email" name="email" placeholder="Email" class="mt-3" id="email" required> <br>
+                <input type="text" name="phone" placeholder="Phone Number" class="mt-3" id="phone" required> <br>
+                <input type="password" name="password" placeholder="Create Password" id="pwd" class="mt-3" required> <br>
+                <input type="password" name="password_2" placeholder="Confirm Password" id="c_pwd" class="mt-3" required> <br>
                 <input type="submit" name="signup" value="Signup" class="btn btn-lg text-center btn-success mt-3">
             </form>
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function (){
+        $('form').submit(function (event){
+            event.preventDefault()
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var pwd = document.getElementById('pwd').value;
+            var c_pwd = document.getElementById('c_pwd').value;
+
+            $.post('user_signup.php',{ name: name, email: email, phone: phone, pwd: pwd, c_pwd: c_pwd }, function(data){
+                if(data == '1'){
+                    // $(location).attr('href', 'index.php');
+                    alert("User Registered Successfully")
+                    history.go(-2);
+                }
+                else{
+                    result.innerHTML = data;
+                }
+            })
+        })
+    })
+</script>
 
 <?php
     include('footer.php');

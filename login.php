@@ -1,4 +1,5 @@
 <?php
+SESSION_START();
     $title="Login - Supreme Products";
     include('top.php');
     include('navigation.php');
@@ -11,20 +12,26 @@
                 <h3 class="text-center">
                     Login To Supreme Products
                 </h3>
-                <form action="" class="form-controll login-form text-center">
-                    <input type="text" name="username" placeholder="Enter Username" id="" class="mt-4" required> <br>
-                    <input type="password" name="username" placeholder="Enter Password" id="" class="mt-4" required> <br>
+                <p class="alert-danger" id="result"></p>
+                <form action="user_login.php" method="POST" class="form-controll login-form text-center">
+                    <input type="text" name="uname" placeholder="Enter Email Id" id="uname" class="mt-4" required> <br>
+                    <input type="password" name="upass" placeholder="Enter Password" id="upass" class="mt-4" required> <br>
                     <input type="submit" value="login" class="btn btn-md login-btn mt-4"> <br>
                     <div class="p-2"></div>
                     <a href="" class="pt-3">Forgot Password?</a>
                 </form>
-                <div class="row mt-4">
-                    <!-- <div class="col-lg-6 text-left col-6">
-                        <a href="#" id="" style="margin-left: 15px">Signup</a>
-                    </div> -->
-                    <div class="col-lg-6 col-6 m-auto">
-                        
-                    </div>
+                <div class="text-danger">
+                    <?php
+                        if(isset($_SESSION["error"])){
+                            echo "
+                              <div class='alert alert-danger alert-dismissible'>
+                                <h4><i class='icon fa fa-warning'></i> Error!</h4>
+                                ".$_SESSION["error"]."
+                              </div>
+                            ";
+                            unset($_SESSION["error"]);
+                        }       
+                    ?>
                 </div>
             </div>
             <div class="col-lg-7 bg-dark-grey text-white shadow signup p-3">
@@ -40,6 +47,29 @@
         </div>
     </div>
 </div>
+
+<!-- <script>
+    $(document).ready(function (){
+        $('form').submit(function (event){
+            event.preventDefault()
+            var uname = document.getElementById('uname');
+            var upass = document.getElementById('upass');
+
+            console.log('uname');
+
+            $.post('user_login.php',{ uname: uname, upass: upass }, function(data){
+                if(data == '1'){
+                    // $(location).attr('href', 'index.php');
+                    alert("Login Successfull")
+                    history.go(-1);
+                }
+                else{
+                    result.innerHTML = data;
+                }
+            })
+        })
+    })
+</script> -->
 
 <?php
     include('footer.php');
