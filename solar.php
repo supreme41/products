@@ -6,45 +6,35 @@
 
 <div class="container">
     <div class="row">
-        <a href="product-details.php" class="prod-card"><div class="col-lg-3 mt-4">
-            <div class="card px-2 py-3">
-                <img src="images/featured-1.png" alt="" class="w-100">
-                <h5 class="mt-2 ">
-                    Supreme Solar Water Heater 200LPD Glass lined Model
-                </h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum officia totam.</p>
-            </div></a>
-        </div>
-        <div class="col-lg-3 mt-4">
-            <div class="card px-2 py-3">
-                <img src="images/featured-1.png" alt="" class="w-100">
-                <h5 class="mt-2">
-                    Supreme Solar Water Heater 300LPD FPC Model
-                </h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum officia totam.</p>
-            </div>
-        </div>
-        <div class="col-lg-3 mt-4">
-            <div class="card px-2 py-3">
-                <img src="images/featured-1.png" alt="" class="w-100">
-                <h5 class="mt-2">
-                    Supreme Solar Water Heater 200LPD Glass lined Model 
-                </h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum officia totam.</p>
-            </div>
-        </div>
-        <div class="col-lg-3 mt-4">
-            <div class="card px-2 py-3">
-                <img src="images/featured-1.png" alt="" class="w-100">
-                <h5 class="mt-2">
-                    Supreme Solar Water Heater 200LPD Glass lined Model
-                </h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum officia totam.</p>
-            </div>
-        </div>
+
+        <?php
+            include('connection/connection.php');
+
+            // if(isset($_REQUEST['id'])){
+            //     $category = $_REQUEST['id'];
+
+            $sql = "SELECT * FROM products WHERE ";
+            $res = mysqli_query($conn,  $sql);
+
+            if (mysqli_num_rows($res) > 0) {
+                while ($prod = mysqli_fetch_assoc($res)) {  ?>
+
+                    <div class="col-lg-3 mt-5">
+                        <a href="product-details.php?id=<?php echo $prod['pid'] ?>" class="prod-card">
+                            <div class="card px-2 py-3">
+                                <img src="admin/upload_product_images/<?php echo $prod['image1']; ?>" alt="" class="w-100">
+                                <h5 class="mt-2 ">
+                                    <?php echo $prod['pname']; ?>
+                                </h5>
+                                <p><?php echo $prod['pdescription'];  ?></p>
+                        </div> </a>
+                    </div>
+
+        <?php } } ?>
+
     </div>
 </div> 
 
 <?php
-    include('footer.php')
+    include('footer.php');
 ?>
