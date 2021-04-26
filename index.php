@@ -124,7 +124,7 @@
     <div class="container py-5 text-center">
         <h1 class="skinny-text">Solar Water Heaters</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, perspiciatis? Aliquam, praesentium.</p>
-        <a href="#" class="cat-view"> View All Producs <span class="fa fa-angle-double-right"></span> </a>
+        <a href="solar.php" class="cat-view"> View All Producs <span class="fa fa-angle-double-right"></span> </a>
         <div class="col-lg-8 m-auto mt-5">
             <img src="images/solar-cat.png" alt="" class="w-100">
         </div>
@@ -136,7 +136,7 @@
         <div class="col-lg-6 text-center py-5  bg-light-gradient">
             <h1 class="skinny-text">Electric Geysers</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Voluptas, perspiciatis? Aliquam, praesentium.</p>
-            <a href="#" class="cat-view-2"> View All Producs <span class="fa fa-angle-double-right"></span> </a>
+            <a href="geyser.php" class="cat-view-2"> View All Producs <span class="fa fa-angle-double-right"></span> </a>
             <div class="col-lg-4 m-auto mt-5">
                 <img src="images/featured-2.png" alt="" class="w-100">
             </div>
@@ -144,7 +144,7 @@
         <div class="col-lg-6 prod-cat-section py-5 text-center prod-cat-section">
             <h1 class="skinny-text">Water Purifiers</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Voluptas, perspiciatis? Aliquam, praesentium.</p>
-            <a href="#" class="cat-view"> View All Producs <span class="fa fa-angle-double-right"></span> </a>
+            <a href="purifier.php" class="cat-view"> View All Producs <span class="fa fa-angle-double-right"></span> </a>
             <div class="col-lg-4 m-auto mt-4">
                 <img src="images/purifier.png" alt="" class="w-100">
             </div>
@@ -155,7 +155,7 @@
     <div class="container py-5 text-center">
         <h1 class="skinny-text">Kitchen Chimneys</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, perspiciatis? Aliquam, praesentium.</p>
-        <a href="#" class="cat-view"> View All Producs <span class="fa fa-angle-double-right"></span> </a>
+        <a href="chimney.php" class="cat-view"> View All Producs <span class="fa fa-angle-double-right"></span> </a>
         <div class="col-lg-5 m-auto mt-5">
             <img src="images/chimney.png" alt="" class="w-100">
         </div>

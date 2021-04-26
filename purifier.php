@@ -1,5 +1,5 @@
 <?php
-    $title="Solar Water Heater";
+    $title="Supreme Water Purifier";
     include('top.php');
     include('navigation.php');
 ?>
@@ -13,7 +13,7 @@
             // if(isset($_REQUEST['id'])){
             //     $category = $_REQUEST['id'];
 
-            $sql = "SELECT * FROM products WHERE pcategory = 'solar'";
+            $sql = "SELECT * FROM products WHERE pcategory = 'purifier'";
             $res = mysqli_query($conn,  $sql);
 
             if (mysqli_num_rows($res) > 0) {

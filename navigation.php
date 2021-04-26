@@ -38,19 +38,19 @@
           <a class="nav-link" aria-current="page" href="solar.php">Solar Water Heaters</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Kitchen Chimneys</a>
+          <a class="nav-link" aria-current="page" href="chimney.php">Kitchen Chimneys</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Electric Geysers</a>
+          <a class="nav-link" aria-current="page" href="geyser.php">Electric Geysers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Water Purifier</a>
+          <a class="nav-link" aria-current="page" href="purifier.php">Water Purifier</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Food Products</a>
+          <a class="nav-link" aria-current="page" href="food.php">Food Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Contact</a>
+          <a class="nav-link" aria-current="page" href="contact.php">Contact</a>
         </li>
       </ul>
       <form class="d-flex">

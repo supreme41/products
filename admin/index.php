@@ -43,13 +43,13 @@ include_once 'home.php';
                       <option class="text-white bg-warning">
                         Pick a Category
                       </option>
-                      <option value="solar water heater">
+                      <option value="solar">
                         Solar Water Heater
                       </option>
-                      <option value="Geyser">
+                      <option value="geyser">
                         Geyser
                       </option>
-                      <option value="Water Purifier">
+                      <option value="purifier">
                         Water Purifier
                       </option>
 					  <option value="chimnies">
